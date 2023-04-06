@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.*;
 public class AspectV6Advice {
 
     //hello.aop.order 패키지와 하위 패키지 이면서 클래스 이름 패턴이 *Service
-/*    @Around("hello.aop.order.aop.PointCuts.orderAndService()")
+    @Around("hello.aop.order.aop.PointCuts.orderAndService()")
     public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
         try {
             // @Before
@@ -27,7 +27,7 @@ public class AspectV6Advice {
             // @After
             log.info("[리소스 릴리즈] {}", joinPoint.getSignature());
         }
-    }*/
+    }
 
     @Before("hello.aop.order.aop.PointCuts.orderAndService()")
     public void doBefore(JoinPoint joinPoint) {
