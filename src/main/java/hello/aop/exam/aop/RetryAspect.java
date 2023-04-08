@@ -24,6 +24,7 @@ public class RetryAspect {
                 log.info("[retry] try count={}/{}", retryCount, maxRetry);
                 return joinPoint.proceed();
             } catch (Exception e) {
+                log.info("[retry] exception", e);
                 exceptionHolder = e;
             }
         }
